@@ -16,7 +16,6 @@ rtl-audit-report.json
 
 # IDE
 .idea/
-.vscode/
 *.swp
 *.swo
 
@@ -25,8 +24,6 @@ rtl-audit-report.json
 Thumbs.db
 
 # Env files
-.env
-.env.local
 .env.*.local
 
 # Logs
@@ -93,3 +90,4 @@ packages/core/locales/pseudo.json
 # when the manifest's claims no longer match the repo.
 apps/storybook/.lab-readiness/
 apps/storybook/.storybook/lab-readiness/
+config.bat
