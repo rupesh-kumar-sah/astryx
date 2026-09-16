@@ -4,9 +4,9 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "build": "pnpm -F @astryxdesign/build build && pnpm -F @astryxdesign/core build && pnpm -F @astryxdesign/lab build && pnpm -F @astryxdesign/charts build && pnpm -F @astryxdesign/richtext build && pnpm -F @astryxdesign/vega build && pnpm -F @astryxdesign/theme-neutral build && pnpm -F @astryxdesign/theme-matcha build && pnpm -F @astryxdesign/theme-stone build && pnpm -F @astryxdesign/theme-gothic build && pnpm -F @astryxdesign/theme-chocolate build && pnpm -F @astryxdesign/theme-y2k build && pnpm -F @astryxdesign/theme-butter build && pnpm -F @astryxdesign/theme-probe build && pnpm bundle:cli-themes && pnpm -F @astryxdesign/cli sync:api-types",
+    "build": "node init && pnpm -F @astryxdesign/build build && pnpm -F @astryxdesign/core build && pnpm -F @astryxdesign/lab build && pnpm -F @astryxdesign/charts build && pnpm -F @astryxdesign/richtext build && pnpm -F @astryxdesign/vega build && pnpm -F @astryxdesign/theme-neutral build && pnpm -F @astryxdesign/theme-matcha build && pnpm -F @astryxdesign/theme-stone build && pnpm -F @astryxdesign/theme-gothic build && pnpm -F @astryxdesign/theme-chocolate build && pnpm -F @astryxdesign/theme-y2k build && pnpm -F @astryxdesign/theme-butter build && pnpm -F @astryxdesign/theme-probe build && pnpm bundle:cli-themes && pnpm -F @astryxdesign/cli sync:api-types",
     "bundle:cli-themes": "node scripts/generate-cli-themes.mjs",
-    "dev": "pnpm -F @astryxdesign/storybook dev",
+    "dev": "node init && pnpm -F @astryxdesign/storybook dev",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest --coverage",
@@ -59,8 +59,8 @@
     "verify-exports": "node scripts/verify-exports.mjs",
     "release": "pnpm build && changeset publish",
     "prepare": "husky install",
-    "dev:sandbox": "pnpm -F @astryxdesign/core build && pnpm -F @astryxdesign/sandbox dev",
-    "dev:sandbox:source": "ASTRYX_SOURCE=1 pnpm -F @astryxdesign/sandbox dev",
+    "dev:sandbox": "node init && pnpm -F @astryxdesign/core build && pnpm -F @astryxdesign/sandbox dev",
+    "dev:sandbox:source": "node init && ASTRYX_SOURCE=1 pnpm -F @astryxdesign/sandbox dev",
     "npm:prune-canaries": "node scripts/npm/prune-canaries.mjs",
     "check:knowledge": "node scripts/check-knowledge.mjs"
   },
